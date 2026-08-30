@@ -1,0 +1,116 @@
+/* Minimal commercial contact treatment, kept separate from the compressed core stylesheet. */
+.site-footer {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 31px;
+}
+
+.footer-cooperation {
+  scroll-margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 40px;
+  align-items: center;
+  padding: 27px 30px;
+  background: linear-gradient(135deg, rgba(221, 237, 224, .075), rgba(221, 237, 224, .025));
+  border: 1px solid rgba(224, 239, 226, .14);
+  border-radius: 5px;
+  backdrop-filter: blur(18px);
+}
+
+.footer-cooperation-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-cooperation-copy strong {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.footer-cooperation-copy p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.footer-email {
+  justify-self: end;
+  display: grid;
+  gap: 5px;
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+  text-align: right;
+}
+
+.footer-email span {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.footer-email strong {
+  color: var(--mint);
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color .25s;
+}
+
+.footer-email:hover strong {
+  color: #d0f0d7;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.footer-meta {
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .footer-cooperation {
+    grid-template-columns: 1fr;
+    gap: 21px;
+    padding: 23px;
+  }
+
+  .footer-email {
+    justify-self: start;
+    width: 100%;
+    padding-top: 18px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+  }
+
+  .footer-bottom .footer-meta {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer-cooperation {
+    padding: 20px;
+  }
+
+  .footer-cooperation-copy p {
+    max-width: 280px;
+  }
+
+  .footer-email strong {
+    font-size: 12px;
+  }
+}
